@@ -182,9 +182,12 @@ exec_always --no-startup-id ~/.config/polybar/startup.sh
 # start feh with random wallpaper
 exec_always --no-startup-id feh --recursive --randomize --bg-fill ~/.wallpaper
 
+# start dunst notification daemon
+exec_always dunst
+
 # pulseaudio controls
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%
+bindsym XF86AudioRaiseVolume exec ~/.scripts/sound.sh up
+bindsym XF86AudioLowerVolume exec ~/.scripts/sound.sh down
 
 # enable gaps
 smart_gaps on
