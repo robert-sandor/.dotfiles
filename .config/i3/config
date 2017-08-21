@@ -188,6 +188,7 @@ exec_always dunst
 # pulseaudio controls
 bindsym XF86AudioRaiseVolume exec ~/.scripts/sound.sh up
 bindsym XF86AudioLowerVolume exec ~/.scripts/sound.sh down
+bindsym XF86AudioMute exec ~/.scripts/sound.sh mute
 
 # enable gaps
 smart_gaps on
