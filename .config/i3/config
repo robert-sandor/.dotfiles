@@ -212,3 +212,19 @@ bindsym $mod+Shift+x exec ~/.scripts/i3lock.sh
 
 # run compton
 exec_always compton
+
+# mode for moving workspaces around the screens
+set $ws_move_mode "Move Workspace"
+
+mode $ws_move_mode {
+	bindsym j move workspace to output left
+	bindsym k move workspace to output down
+	bindsym l move workspace to output up
+	bindsym semicolon move workspace to output right
+	
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+bindsym $mod+Shift+m mode $ws_move_mode
+
