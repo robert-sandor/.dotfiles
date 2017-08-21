@@ -50,7 +50,7 @@ font-1 = monofur:fontformat=truetype:size=10;1
 
 modules-left = i3 xwindow
 modules-center = date music
-modules-right = xbacklight volume wlan eth battery 
+modules-right = xbacklight volume temperature wlan eth battery 
 
 tray-position = right
 tray-padding = 9
@@ -209,3 +209,14 @@ format = <label>
 label = %output:0:45%
 exec = ~/.config/polybar/mpris.sh 2>/dev/null
 
+[module/temperature]
+type = internal/temperature
+
+interval = 0.5
+thermal-zone = 0
+warn-temperature = 60
+
+label =  %temperature%
+
+label-warn =  %temperature%
+label-warn-foreground = ${colors.color1}
