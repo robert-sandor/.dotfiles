@@ -190,6 +190,10 @@ bindsym XF86AudioRaiseVolume exec ~/.scripts/sound.sh up
 bindsym XF86AudioLowerVolume exec ~/.scripts/sound.sh down
 bindsym XF86AudioMute exec ~/.scripts/sound.sh mute
 
+# backlight control
+bindsym XF86MonBrightnessDown exec ~/.scripts/backlight.sh down
+bindsym XF86MonBrightnessUp exec ~/.scripts/backlight.sh up
+
 # enable gaps
 smart_gaps on
 gaps inner 10
