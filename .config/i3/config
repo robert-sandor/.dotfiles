@@ -209,11 +209,8 @@ mode "gaps" {
 }
 bindsym $mod+Shift+g mode "gaps"
 
-# enable monitor switching
-set $xrandr_script ~/.scripts/xrandr.sh
-bindsym $mod+Shift+d exec $xrandr_script
-# and run it when i3 starts
-exec $xrandr_script
+# run the xrandr script every time i3 reloads
+exec_always ~/.scripts/xrandr.sh
 
 # run i3lock on Mod+l
 bindsym $mod+Shift+x exec ~/.scripts/i3lock.sh

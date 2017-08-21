@@ -20,5 +20,5 @@ do
 	fi
 done
 
-# restart i3wm
-i3-msg restart
+# restart polybar
+~/.config/polybar/startup.sh
