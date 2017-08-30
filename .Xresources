@@ -13,8 +13,8 @@ URxvt*scrollTtyKeypress: true
 URxvt.secondaryScreen: 1
 URxvt.secondaryScroll: 0
 
-! set the font to Source Code Pro 13
-URxvt.font: xft:monofur:size=12
+! set the font to Source Code Pro 10
+URxvt.font: xft:Source Code Pro:size=10
 xft*dpi: 96
 xft*antialias: true
 xft*hinting: full
