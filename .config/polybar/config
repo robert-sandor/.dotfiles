@@ -50,7 +50,7 @@ font-1 = SourceCodePro-Regular:fontformat=truetype:size=10;1
 
 modules-left = i3 music
 modules-center = xwindow
-modules-right = xbacklight volume temperature wlan eth battery date 
+modules-right = bluetooth xbacklight volume temperature wlan eth battery date 
 
 tray-position = right
 tray-padding = 9
@@ -63,6 +63,11 @@ tray-background = ${colors.background}
 
 ;wm-restack = i3 
 ;override-redirect = true
+
+[module/bluetooth]
+type = custom/script
+interval = 5
+exec = ~/.config/polybar/bluetooth.sh
 
 [module/i3]
 type = internal/i3
