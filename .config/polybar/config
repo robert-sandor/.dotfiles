@@ -45,8 +45,8 @@ module-margin-left = 2
 module-margin-right = 2
 
 font-2 = FontAwesome:fontformat=truetype:size=10;1
-font-0 = monofur:fontformat=truetype:size=10;1
-font-1 = monofur:fontformat=truetype:size=10;1
+font-0 = SourceCodePro-Regular:fontformat=truetype:size=10;1
+font-1 = SourceCodePro-Regular:fontformat=truetype:size=10;1
 
 modules-left = i3 music
 modules-center = xwindow
@@ -157,6 +157,7 @@ label-foreground = ${colors.foreground}
 
 [module/xbacklight]
 type = internal/xbacklight
+output = eDP-1
 card = intel_backlight
 
 format = <label>
@@ -175,7 +176,7 @@ label-volume = %percentage%
 
 [module/wlan]
 type = internal/network
-interface = wlp2s0
+interface = wlp8s0
 
 format-connected = <label-connected>
 format-disconnected = <label-disconnected>
@@ -188,7 +189,7 @@ label-disconnected-foreground = ${colors.color1}
 
 [module/eth]
 type = internal/network
-interface = enp3s0
+interface = enp9s0
 
 format-connected = <label-connected>
 format-disconnected = <label-disconnected>
@@ -201,12 +202,16 @@ label-disconnected-foreground = ${colors.color1}
 
 [module/music]
 type = custom/script
-interval = 2
+interval = 1
 
 format = <label>
 
 label = %output:0:45%
 exec = ~/.config/polybar/mpris.sh 2>/dev/null
+exec-if = pgrep Google\ Play\ Mus
+
+click-left = playerctl play-pause
+click-right = playerctl next
 
 [module/temperature]
 type = internal/temperature
