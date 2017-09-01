@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# set the main display
+main_display=eDP1
+
 # get all disconnected displays and turn them off
 disconnected=`xrandr | grep " disconnected" | awk '{print $1}'`
 
@@ -14,8 +17,8 @@ connected=`xrandr | grep " connected" | awk '{print $1}'`
 
 for display in $connected
 do
-	if [ "$display" != "eDP1" ]; then
-		xrandr --output $display --primary --auto --left-of eDP1
+	if [ "$display" != "$main_display" ]; then
+		xrandr --output $display --primary --auto --left-of $main_display
 		echo "$display is connected and on"
 	fi
 done
