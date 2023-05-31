@@ -1,0 +1,33 @@
+# ZSH configuration
+alias zshconf="$EDITOR ~/.zshrc"
+alias zshsource="source ~/.zshrc"
+alias zshupd="cd ~/.oh-my-zsh && git pull && cd -"
+
+# SSH configuration
+alias sshconf="$EDITOR ~/.ssh/config"
+alias sshknown="$EDITOR ~/.ssh/known_hosts"
+alias sshpubkey="cat ~/.ssh/id.pub"
+alias sshremove="ssh-keygen -R"
+
+# Neovim shorthand
+alias nv="nvim"
+
+# Some tmux goodies
+alias tm="tmux new-session -A -s main"
+alias tms="~/.local/bin/tmux-sessionizer.sh"
+
+# Use bat instead of cat
+alias cat="bat"
+
+# Use ncdu instead of du
+alias du="ncdu"
+
+# Weather
+alias weather="curl wttr.in/cluj"
+
+# exa in place of ls
+alias ls="exa"
+alias la="exa -la"
+alias l="exa -l"
+alias ll="exa -l"
+
