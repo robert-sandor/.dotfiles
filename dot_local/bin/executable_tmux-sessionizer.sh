@@ -3,7 +3,7 @@
 if [[ $# -eq 1 ]]; then
 	selected=$1
 else
-	selected=$(fd -d 1 -t d . ~/dev ~/.config | fzf-tmux -p)
+	selected=$(fd -d 1 -t d . ~ ~/dev ~/.config | fzf-tmux -p)
 fi
 
 if [[ -z $selected ]]; then
