@@ -13,8 +13,7 @@ alias sshremove="ssh-keygen -R"
 alias nv="nvim"
 
 # Some tmux goodies
-alias tm="tmux new-session -A -s main"
-alias tms="~/.local/bin/tmux-sessionizer.sh"
+alias tm="~/.config/tmux/scripts/tmux-sessionizer.sh"
 
 # Use bat instead of cat
 alias cat="bat"
