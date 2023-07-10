@@ -1,6 +1,7 @@
 # ZSH configuration
 alias zshconf="$EDITOR ~/.zshrc"
 alias zshsource="source ~/.zshrc"
+alias zshupd="cd ~/.oh-my-zsh && git pull && cd -"
 
 # SSH configuration
 alias sshconf="$EDITOR ~/.ssh/config"
@@ -8,7 +9,8 @@ alias sshknown="$EDITOR ~/.ssh/known_hosts"
 alias sshpubkey="cat ~/.ssh/id.pub"
 alias sshremove="ssh-keygen -R"
 
-alias vim="nvim"
+# Neovim shorthand
+alias nv="nvim"
 
 # Some tmux goodies
 alias tm="~/.config/tmux/scripts/tmux-sessionizer.sh"
@@ -23,15 +25,10 @@ alias du="ncdu"
 alias weather="curl wttr.in/cluj"
 
 # exa in place of ls
-alias exa="exa --icons"
 alias ls="exa"
 alias la="exa -la"
 alias l="exa -l"
 alias ll="exa -l"
-alias tree="exa --tree"
 
 # lazygit
 alias lg="lazygit"
-
-# brew update
-alias bu="brew update && brew upgrade && brew cleanup"
