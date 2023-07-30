@@ -28,6 +28,7 @@ alias weather="curl wttr.in/cluj"
 alias ls="exa"
 alias la="exa -la"
 alias l="exa -l"
+alias tree="exa --tree"
 
 # lazygit
 alias lg="lazygit"
