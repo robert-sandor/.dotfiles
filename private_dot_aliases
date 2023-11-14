@@ -7,7 +7,7 @@ alias zshupd="cd ~/.oh-my-zsh && git pull && cd -"
 alias sshconf="$EDITOR ~/.ssh/config"
 alias sshknown="$EDITOR ~/.ssh/known_hosts"
 alias sshpubkey="cat ~/.ssh/id.pub"
-alias sshremove="ssh-keygen -R"
+alias sshremove="~/.config/tmux/scripts/ssh-key-remove.sh"
 
 # Neovim shorthand
 alias nv="nvim"

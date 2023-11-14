@@ -16,6 +16,7 @@ if ! zgenom saved; then
   zgenom ohmyzsh
 
   zgenom ohmyzsh plugins/git
+  zgenom ohmyzsh plugins/docker
 
   if command -v brew &> /dev/null; then zgenom ohmyzsh plugins/brew; fi
 
