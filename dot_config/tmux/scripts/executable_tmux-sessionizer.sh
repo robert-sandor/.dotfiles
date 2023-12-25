@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-selected=$(fd -d 1 -t d . ~ ~/dev ~/.config | fzf-tmux -p --border-label " Switch to directory ")
+# selected=$(fd -d 1 -t d . ~ ~/dev ~/.config | fzf-tmux -p --border-label " Switch to directory ")
+selected=$(zoxide query -l | fzf-tmux -p --border-label " Switch to directory ")
 
 if [[ -z $selected ]]; then
 	exit 0

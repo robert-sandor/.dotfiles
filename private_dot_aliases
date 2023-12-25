@@ -24,11 +24,11 @@ alias du="ncdu"
 # Weather
 alias weather="curl wttr.in/cluj"
 
-# exa in place of ls
-alias ls="exa"
-alias la="exa -la"
-alias l="exa -l"
-alias tree="exa --tree"
+# eza in place of ls
+alias ls="eza"
+alias la="eza -la"
+alias l="eza -l"
+alias tree="eza --tree"
 
 # lazygit
 alias lg="lazygit"
