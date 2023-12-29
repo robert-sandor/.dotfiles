@@ -9,26 +9,35 @@ alias sshknown="$EDITOR ~/.ssh/known_hosts"
 alias sshpubkey="cat ~/.ssh/id.pub"
 alias sshremove="~/.config/tmux/scripts/ssh-key-remove.sh"
 
-# Neovim shorthand
-alias nv="nvim"
-
 # Some tmux goodies
 alias tm="~/.config/tmux/scripts/tmux-sessionizer.sh"
 
 # Use bat instead of cat
-alias cat="bat"
+if type bat &>/dev/null; then
+	alias cat="bat"
+fi
 
-# Use ncdu instead of du
-alias du="ncdu"
-
-# Weather
-alias weather="curl wttr.in/cluj"
+# Use dust instead of du
+if type dust &>/dev/null; then
+	alias du="dust"
+fi
 
 # eza in place of ls
-alias ls="eza"
-alias la="eza -la"
-alias l="eza -l"
-alias tree="eza --tree"
+if type eza &>/dev/null; then
+	alias ls="eza"
+	alias la="eza -la"
+	alias l="eza -l"
+	alias tree="eza --tree"
+elif type exa &>/dev/null; then
+	alias ls="exa"
+	alias la="exa -la"
+	alias l="exa -l"
+	alias tree="exa --tree"
+fi
 
 # lazygit
-alias lg="lazygit"
+if type lazygit &>/dev/null; then
+	alias lg="lazygit"
+fi
+
+# vim: ft=sh
