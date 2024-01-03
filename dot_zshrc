@@ -40,8 +40,8 @@ source ${HOME}/.aliases
 # eval "$(pyenv init -)"
 # eval "$(pyenv virtualenv-init -)"
 
-# rtx - package manager for language versions
-eval "$(rtx activate zsh)"
+# mise - package manager for language versions
+eval "$(mise activate zsh)"
 
 # zoxide - remembers folders I cd into often
 eval "$(zoxide init zsh)"
