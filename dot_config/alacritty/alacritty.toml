@@ -2,7 +2,6 @@ import = [
   # uncomment the flavour you want below:
   # '~/.config/alacritty/catppuccin-mocha.toml'
   '~/.config/alacritty/catppuccin-macchiato.toml'
-  # '~/.config/alacritty/catppuccin-frappe.toml'
 ]
 
 live_config_reload = true
