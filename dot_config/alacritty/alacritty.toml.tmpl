@@ -21,5 +21,9 @@ decorations = "full"
 
 [font]
 normal.family = 'MonaspiceNe Nerd Font'
+{{ if eq .chezmoi.os "darwin" }}
 size = 14
+{{ else }}
+size = 11
+{{ end }}
 offset.y = 2
