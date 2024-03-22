@@ -16,7 +16,7 @@ end
 config.color_scheme = 'Catppuccin Macchiato'
 
 -- disable tab bar
-config.use_fancy_tab_bar = false
+config.use_fancy_tab_bar = true
 config.hide_tab_bar_if_only_one_tab = true
 
 -- command palette
@@ -32,11 +32,13 @@ config.enable_scroll_bar = false
 
 -- disable window padding
 config.window_padding = {
-  left = '8pt',
-  right = '8pt',
-  top = '8pt',
-  bottom = '8pt',
+  left = '4pt',
+  right = '4pt',
+  top = '4pt',
+  bottom = '4pt',
 }
+
+config.window_decorations = 'RESIZE'
 
 -- and finally, return the configuration to wezterm
 return config
