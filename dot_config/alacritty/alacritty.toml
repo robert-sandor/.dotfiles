@@ -12,6 +12,7 @@ dynamic_padding = true
 title = 'Alacritty'
 dynamic_title = false
 
+decorations = "buttonless"
 option_as_alt = 'Both'
 
 [font]
