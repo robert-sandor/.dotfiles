@@ -1,0 +1,7 @@
+[user]
+	name = Robert Sandor
+	email = sandorrobertk94@gmail.com
+[core]
+	editor = nvim
+[init]
+	defaultBranch = main
