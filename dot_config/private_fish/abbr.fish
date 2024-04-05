@@ -18,3 +18,9 @@ abbr bubu "brew update && brew outdated && brew upgrade && brew cleanup"
 if type -q ansible-playbook
     abbr aplay ansible-playbook
 end
+
+# docker compose
+abbr dcu "docker compose up -d"
+abbr dcd "docker compose down"
+abbr dcr "docker compose restart"
+abbr dcl "docker compose logs -f"
