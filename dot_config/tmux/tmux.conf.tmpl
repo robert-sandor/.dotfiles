@@ -73,5 +73,5 @@ set -g @plugin 'christoomey/vim-tmux-navigator'
 run '~/.config/tmux/plugins/tpm/tpm'
 
 # Make fish the default shell
-set -g default-shell "/opt/homebrew/bin/fish"
-set -g default-command "/opt/homebrew/bin/fish"
+set -g default-shell "{{ if eq .chezmoi.os "darwin" }}/opt/homebrew/bin/fish{{ else }}/usr/bin/fish{{ end }}"
+set -g default-command "{{ if eq .chezmoi.os "darwin" }}/opt/homebrew/bin/fish{{ else }}/usr/bin/fish{{ end }}"
