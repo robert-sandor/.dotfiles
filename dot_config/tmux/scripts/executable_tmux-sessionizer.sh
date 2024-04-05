@@ -24,3 +24,5 @@ if [ -z "$TMUX" ]; then
 else
   tmux switch-client -t "$selected_name"
 fi
+
+zoxide add "$selected"

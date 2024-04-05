@@ -4,6 +4,12 @@ import = [
   '~/.config/alacritty/catppuccin-macchiato.toml',
 ]
 
+{{ if eq .chezmoi.os "darwin" }}
+shell = "/opt/homebrew/bin/fish"
+{{- else -}}
+shell = "/usr/bin/fish"
+{{ end }}
+
 [window]
 padding.x = 3
 padding.y = 3
