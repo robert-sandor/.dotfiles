@@ -14,7 +14,8 @@ for path in "$HOME/.local/bin" \
 end
 
 # homebrew
-test -x /opt/homebrew/bin/brew; and /opt/homebrew/bin/brew shellenv | source
+test (uname) = "Darwin"; and test -x /opt/homebrew/bin/brew; and /opt/homebrew/bin/brew shellenv | source
+test (uname) = "Linux"; and test -x /home/linuxbrew/.linuxbrew/bin/brew; and /home/linuxbrew/.linuxbrew/bin/brew shellenv | source
 
 if status is-interactive
     # nvim as the editor and man pager
