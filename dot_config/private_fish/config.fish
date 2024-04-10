@@ -35,6 +35,9 @@ if status is-interactive
     # zoxide - cd but better
     type -q zoxide; and zoxide init fish | source
 
+    # delta - diff viewer
+    type -q delta; and delta --generate-completion fish | source
+
     # mise - package manager for python, node and go, and more ...
     type -q mise; and mise activate fish | source
 
