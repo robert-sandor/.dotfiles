@@ -1,6 +1,4 @@
 import = [
-  # uncomment the flavour you want below:
-  # '~/.config/alacritty/catppuccin-mocha.toml'
   '~/.config/alacritty/catppuccin-macchiato.toml',
 ]
 
@@ -18,18 +16,13 @@ dynamic_padding = true
 title = 'Alacritty'
 dynamic_title = false
 
-{{ if eq .chezmoi.os "darwin" }}
-decorations = "buttonless"
+
+decorations = '{{ if eq .chezmoi.os "darwin" }}buttonless{{ else }}full{{ end }}'
 option_as_alt = 'Both'
-{{ else }}
-decorations = "full"
-{{ end }}
 
 [font]
 normal.family = 'MonaspiceNe Nerd Font'
-{{ if eq .chezmoi.os "darwin" }}
-size = 14
-{{ else }}
-size = 11
-{{ end }}
+size = {{ if eq .chezmoi.os "darwin" }}14{{ else }}11{{ end }}
 offset.y = 2
+
+# vi: ft=toml
