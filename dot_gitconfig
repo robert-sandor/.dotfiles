@@ -1,9 +1,22 @@
+[include]
+	path = ./.catppuccin.gitconfig
 [user]
 	name = Robert Sandor
 	email = sandorrobertk94@gmail.com
 [core]
 	editor = nvim
+	pager = delta
+[interactive]
+	diffFilter = delta --color-only
+[merge]
+	conflictstyle = diff3
+[diff]
+	colorMoved = default
 [init]
 	defaultBranch = main
 [pull]
 	rebase = true
+
+[delta]
+	features = catppuccin-macchiato
+	zero-style = dim syntax
