@@ -27,6 +27,3 @@ abbr dcl "docker compose logs -f"
 
 # act
 abbr act "act --container-architecture linux/amd64"
-
-# lazygit
-abbr lg="lazygit"

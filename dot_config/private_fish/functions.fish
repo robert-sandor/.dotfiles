@@ -33,3 +33,11 @@ if test (uname) = "Darwin"
         test -n "$selected"; and brew uninstall --cask $selected
     end
 end
+
+function lg -d 'lazygit with tmux' -w lazygit
+    if set -q TMUX
+        tmux display-popup -h 90% -w 90% -d "#{pane_current_path}" -E "lazygit $argv"
+    else
+        lazygit $argv
+    end
+end
