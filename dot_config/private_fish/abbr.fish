@@ -24,3 +24,6 @@ abbr dcu "docker compose up -d"
 abbr dcd "docker compose down"
 abbr dcr "docker compose restart"
 abbr dcl "docker compose logs -f"
+
+# act
+abbr act "act --container-architecture linux/amd64"

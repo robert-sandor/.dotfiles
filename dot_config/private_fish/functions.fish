@@ -2,9 +2,9 @@ function l -d 'List files with eza' -w eza
     eza -la $argv
 end
 
-function ssht -d 'SSH with tmux'
+function sshf -d 'SSH with fzf'
     set -l selected (cat ~/.ssh/known_hosts | cut -d ' ' -f1 | uniq | fzf -q "$argv[1]")
-    test -n "$selected"; and ssh -t "$selected" 'tmux new -A -s $USER'
+    test -n "$selected"; and ssh -t "$selected"
 end
 
 function sshrm -d 'Remove ssh keys'
