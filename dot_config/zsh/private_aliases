@@ -1,0 +1,119 @@
+#!/bin/bash
+
+# make cp, mv, rm better
+alias cp="cp -iv"
+alias mv="mv -iv"
+alias rm="rm -iv"
+
+# ZSH configuration
+alias zshrc="\$EDITOR ~/.zshrc"
+alias zshenv="\$EDITOR ~/.zshenv"
+alias zshreload="exec zsh"
+
+# SSH configuration
+alias sshconf="\$EDITOR ~/.ssh/config"
+alias sshknown="\$EDITOR ~/.ssh/known_hosts"
+alias sshpubkey="cat ~/.ssh/id.pub"
+alias sshremove="~/.config/tmux/scripts/ssh-key-remove.sh"
+
+# Some tmux goodies
+alias tm="~/.config/tmux/scripts/tmux-sessionizer.sh"
+
+# Use bat instead of cat
+if command -v bat &>/dev/null; then
+  export BAT_THEME="Catppuccin Macchiato"
+  alias cat="bat -pp"
+fi
+
+# Use dust instead of du
+if command -v dust &>/dev/null; then
+  alias du="dust"
+fi
+
+# eza in place of ls
+if command -v eza &>/dev/null; then
+  alias ls="eza"
+  alias la="eza -la"
+  alias l="eza -l"
+  alias tree="eza --tree"
+elif command -v exa &>/dev/null; then
+  alias ls="exa"
+  alias la="exa -la"
+  alias l="exa -l"
+  alias tree="exa --tree"
+else
+  alias ls="ls --color=auto"
+  alias la="ls -la"
+  alias l="ls -l"
+fi
+
+# lazygit
+if command -v lazygit &>/dev/null; then
+  alias lg="lazygit"
+fi
+
+# homebrew with fzf if available
+if command -v brew &>/dev/null; then
+  if command -v fzf &>/dev/null; then
+    brew_preview="HOMEBREW_COLOR=true brew info {}"
+    brew_preview_cask="HOMEBREW_COLOR=true brew info --cask {}"
+
+    function fuzzy_brew_install() {
+      inst=$(brew formulae | fzf -q "$1" -0 -1 --height=20 --border=rounded --border-label " Homebrew: install formula " --preview="$brew_preview")
+      if [[ $inst ]]; then
+        brew install "$inst"
+      else
+        echo "No candidate selected."
+      fi
+    }
+
+    function fuzzy_brew_uninstall() {
+      inst=$(brew leaves | fzf -q "$1" -0 -1 --height=20 --border=rounded --border-label " Homebrew: uninstall formula " --preview="$brew_preview")
+      if [[ $inst ]]; then
+        brew uninstall --zap "$inst"
+      else
+        echo "No candidate selected."
+      fi
+    }
+
+    function fuzzy_brew_cask_install() {
+      inst=$(brew casks | fzf -q "$1" -0 -1 --height=20 --border=rounded --border-label " Homebrew: install cask " --preview="$brew_preview_cask")
+      if [[ $inst ]]; then
+        brew install --cask "$inst"
+      else
+        echo "No candidate selected."
+      fi
+    }
+
+    function fuzzy_brew_cask_uninstall() {
+      inst=$(brew list --cask | fzf -q "$1" -0 -1 --height=20 --border=rounded --border-label " Homebrew: uninstall cask " --preview="$brew_preview_cask")
+      if [[ $inst ]]; then
+        brew uninstall --cask --zap "$inst"
+      else
+        echo "No candidate selected."
+      fi
+    }
+
+    alias bi=fuzzy_brew_install
+    alias bci=fuzzy_brew_cask_install
+    alias bu=fuzzy_brew_uninstall
+    alias bcu=fuzzy_brew_cask_uninstall
+  else
+    alias bi="brew install"
+    alias bci="brew install --cask"
+    alias bu="brew uninstall --zap"
+    alias bcu="brew uninstall --cask --zap"
+  fi
+
+  alias bu="brew update && brew outdated && brew upgrade && brew cleanup"
+fi
+
+# ripgrep instead of grep
+if command -v rg &>/dev/null; then
+  alias grep="rg"
+fi
+
+# port
+# alias port="netstat -tulpn | grep"
+
+# vim: ft=bash
