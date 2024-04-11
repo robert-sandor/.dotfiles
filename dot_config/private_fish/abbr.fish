@@ -1,7 +1,7 @@
 # safer cp, mv and rm
 abbr cp "cp -iv"
 abbr mv "mv -iv"
-abbr rm "rm -iv"
+abbr rm "rm -rIv" # remove verbose, recursive and interactive if > 3 files
 
 # fast fish config access
 abbr fishconf "cd $__fish_config_dir; nvim config.fish"
