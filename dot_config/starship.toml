@@ -1,7 +1,5 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
-format = """$directory$character"""
-right_format = """$all"""
 palette = "catppuccin_macchiato"
 
 [package]
