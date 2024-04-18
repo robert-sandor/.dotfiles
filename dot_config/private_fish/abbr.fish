@@ -4,11 +4,11 @@ abbr mv "mv -iv"
 abbr rm "rm -rIv" # remove verbose, recursive and interactive if > 3 files
 
 # fast fish config access
-abbr fishconf "cd $__fish_config_dir; nvim config.fish"
+abbr fishconf "cd $__fish_config_dir; nvim config.fish; cd -"
 abbr fishrel "source $__fish_config_dir/config.fish"
 
 # ssh
-abbr sshconf "cd $HOME/.ssh; nvim config"
+abbr sshconf "cd $HOME/.ssh; nvim config; cd -"
 abbr sshpub "bat -pp $HOME/.ssh/id_ed25519.pub"
 
 # homebrew
