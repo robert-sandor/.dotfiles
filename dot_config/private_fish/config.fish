@@ -5,17 +5,16 @@ set -Ux XDG_CONFIG_HOME "$HOME/.config"
 set -Ux XDG_DATA_HOME "$HOME/.local/share"
 set -Ux XDG_CACHE_HOME "$HOME/.local/cache"
 
-# PATH
-for path in "$HOME/.local/bin" \
-            "$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
-    if test -d "$path"; and not contains "$path" $PATH
-        set PATH "$path" $PATH
-    end
-end
-
 # homebrew
 test (uname) = "Darwin"; and test -x /opt/homebrew/bin/brew; and /opt/homebrew/bin/brew shellenv | source
 test (uname) = "Linux"; and test -x /home/linuxbrew/.linuxbrew/bin/brew; and /home/linuxbrew/.linuxbrew/bin/brew shellenv | source
+
+# update paths for bins
+for path in "$HOME/.local/bin" \
+            "$HOME/.local/share/bob/nvim-bin/" \
+            "$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
+    fish_add_path $path
+end
 
 if status is-interactive
     # nvim as the editor and man pager
@@ -28,6 +27,9 @@ if status is-interactive
 
     # zoxide - cd but better
     type -q zoxide; and zoxide init fish | source
+            
+    # docker completions
+    type -q docker; and docker completion fish | source
 
     # delta - diff viewer
     type -q delta; and delta --generate-completion fish | source
@@ -40,6 +42,9 @@ if status is-interactive
 
     # starship prompt
     type -q starship; and starship init fish | source
+
+    # bob - neovim version manager
+    type -q bob; and bob complete fish | source
 
     # load aliases
     for file in "aliases.fish" \
