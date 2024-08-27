@@ -2,6 +2,10 @@ function l -d 'List files with eza' -w eza
     eza -la $argv
 end
 
+function cat -d 'cat with bat' -w bat
+    bat -p $argv
+end
+
 function sshf -d 'SSH with fzf'
     set -l selected (cat ~/.ssh/known_hosts | cut -d ' ' -f1 | uniq | fzf -q "$argv[1]")
     test -n "$selected"; and ssh -t "$selected"
