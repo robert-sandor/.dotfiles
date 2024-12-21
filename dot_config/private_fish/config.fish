@@ -1,57 +1,36 @@
-# disable greeting
-set -U fish_greeting
+# disable fish greeting
+set -g fish_greeting
 
-set -Ux XDG_CONFIG_HOME "$HOME/.config"
-set -Ux XDG_DATA_HOME "$HOME/.local/share"
-set -Ux XDG_CACHE_HOME "$HOME/.local/cache"
-
-# homebrew
-test (uname) = "Darwin"; and test -x /opt/homebrew/bin/brew; and /opt/homebrew/bin/brew shellenv | source
-test (uname) = "Linux"; and test -x /home/linuxbrew/.linuxbrew/bin/brew; and /home/linuxbrew/.linuxbrew/bin/brew shellenv | source
-
-# update paths for bins
-for path in "$HOME/.local/bin" \
-            "$HOME/.local/share/bob/nvim-bin/" \
-            "$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
-    fish_add_path $path
-end
-
-if status is-interactive
-    # nvim as the editor and man pager
+if status --is-interactive
+    set -gx SHELL (which fish)
     set -gx EDITOR nvim
-    set -gx VISUAL nvim
     set -gx MANPAGER "nvim +Man!"
 
-    # set vi mode
-    set -g fish_key_bindings fish_vi_key_bindings
+    set -l fish_conf_dir ~/.config/fish
 
-    # zoxide - cd but better
-    type -q zoxide; and zoxide init fish | source
-            
-    # docker completions
-    type -q docker; and docker completion fish | source
-
-    # delta - diff viewer
-    type -q delta; and delta --generate-completion fish | source
-
-    # mise - package manager for python, node and go, and more ...
-    type -q mise; and mise activate fish | source
-
-    # fzf - fuzzy find everything
-    type -q fzf; and fzf --fish | source
-
-    # starship prompt
-    type -q starship; and starship init fish | source
-
-    # bob - neovim version manager
-    type -q bob; and bob complete fish | source
-
-    # load aliases
-    for file in "aliases.fish" \
-                "abbr.fish" \
-                "functions.fish" \
-                "fzf.fish"
-        set -l filepath "$__fish_config_dir/$file"
-        test -f "$filepath"; and source "$filepath"
+    function sshf
+        set selected (cat ~/.ssh/known_hosts | cut -d ' ' -f1 | uniq | fzf-tmux -p -- -q "$argv[1]")
+        test -n "$selected"; and ssh -t "$selected"
     end
+
+    function sshrm
+        set selected (cat ~/.ssh/known_hosts | cut -d ' ' -f1 | uniq | fzf-tmux -p -- -q "$argv[1]")
+        test -n "$selected"; and ssh-keygen -R "$selected"
+    end
+
+    # Aliases
+    function tm -d "tmux sessionizer"
+        command ~/.config/tmux/sessionizer.sh paths
+    end
+
+    # Interactive shell initialisation
+    command -q brew; and source "$fish_conf_dir/brew.fish"
+    command -q chezmoi; and source "$fish_conf_dir/chezmoi.fish"
+    command -q fzf; and source "$fish_conf_dir/fzf.fish"
+    command -q zoxide; and zoxide init fish | source
+    command -q starship; and starship init fish | source; and enable_transience
+    command -q mise; and mise activate fish | source
+
+    # abbreviations
+    source "$fish_conf_dir/abbrs.fish"
 end
