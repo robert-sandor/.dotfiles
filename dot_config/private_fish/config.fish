@@ -1,6 +1,8 @@
 # disable fish greeting
 set -g fish_greeting
 
+# PATH
+
 if status --is-interactive
     set -gx SHELL (which fish)
     set -gx EDITOR nvim
@@ -30,6 +32,7 @@ if status --is-interactive
     command -q zoxide; and zoxide init fish | source
     command -q starship; and starship init fish | source; and enable_transience
     command -q mise; and mise activate fish | source
+    command -q yazi; and source "$fish_conf_dir/yazi.fish"
 
     # abbreviations
     source "$fish_conf_dir/abbrs.fish"
