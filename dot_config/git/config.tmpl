@@ -15,8 +15,8 @@
 	rebase = true
 
 [user]
-	email = "{{ .user.email }}"
-	name = "{{ .user.fullname }}"
+	email = {{ .user.email | quote }}
+	name = {{ .user.fullname | quote }}
 
 [include]
 	path = "~/.config/git/catppuccin.gitconfig"
