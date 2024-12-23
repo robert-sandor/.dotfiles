@@ -2,6 +2,7 @@
 set -g fish_greeting
 
 # PATH
+fish_add_path (brew --prefix rustup)/bin
 
 if status --is-interactive
     set -gx SHELL (which fish)
