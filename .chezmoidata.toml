@@ -1,8 +1,0 @@
-[user]
-fullname = "Robert Sandor"
-email = "sandorrobertk94@gmail.com"
-
-[terminal]
-font = "FiraCode Nerd Font Mono"
-fontSize = 16.0
-shellPath = "/opt/homebrew/bin/fish"
