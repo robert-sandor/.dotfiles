@@ -70,6 +70,8 @@ cask "docker"
 cask "ente-auth"
 # Web browser
 cask "firefox"
+# Terminal emulator that uses platform-native UI and GPU acceleration
+cask "ghostty"
 # Web browser
 cask "google-chrome"
 # JetBrains tools manager
