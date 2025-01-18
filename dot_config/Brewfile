@@ -24,6 +24,8 @@ brew "fzf"
 brew "git"
 # Syntax-highlighting pager for git and diff output
 brew "git-delta"
+# User-friendly cURL replacement (command-line HTTP client)
+brew "httpie"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick"
 # Lazier way to manage everything docker
@@ -56,8 +58,6 @@ brew "yazi"
 brew "zoxide"
 # User-friendly command-line shell for UNIX-like operating systems
 brew "fish-shell/fish-beta-4/fish"
-# Application launcher and productivity software
-cask "alfred"
 # 3D model slicing software for 3D printers, maintained by Bambu Lab
 cask "bambu-studio"
 # Web browser focusing on privacy
@@ -76,6 +76,8 @@ cask "ghostty"
 cask "google-chrome"
 # JetBrains tools manager
 cask "jetbrains-toolbox"
+# Keyboard customiser
+cask "karabiner-elements"
 # GPU-based terminal emulator
 cask "kitty"
 # Privacy-first, open-source platform for knowledge sharing and management
@@ -84,12 +86,12 @@ cask "logseq"
 cask "protonvpn"
 # Toolbox companion for QMK Firmware
 cask "qmk-toolbox"
+# Control your tools with a few keystrokes
+cask "raycast"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 # Instant messaging application focusing on security
 cask "signal"
-# Music streaming service
-cask "spotify"
 # Video game digital distribution service
 cask "steam"
 # Media player based on MPlayer and mplayer2
