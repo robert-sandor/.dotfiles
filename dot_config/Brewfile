@@ -80,10 +80,6 @@ cask "ghostty"
 cask "google-chrome"
 # JetBrains tools manager
 cask "jetbrains-toolbox"
-# Keyboard customiser
-cask "karabiner-elements"
-# GPU-based terminal emulator
-cask "kitty"
 # Privacy-first, open-source platform for knowledge sharing and management
 cask "logseq"
 # Browse, manage, inspect containers and images
@@ -114,8 +110,6 @@ cask "transmission"
 cask "unnaturalscrollwheels"
 # Native desktop client for WhatsApp
 cask "whatsapp"
-# Gecko based web browser
-cask "zen-browser"
 mas "Bitwarden", id: 1352778147
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
