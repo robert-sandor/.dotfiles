@@ -28,8 +28,6 @@ brew "fzf"
 brew "git"
 # Syntax-highlighting pager for git and diff output
 brew "git-delta"
-# User-friendly cURL replacement (command-line HTTP client)
-brew "httpie"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick"
 # Lazier way to manage everything docker
@@ -50,6 +48,8 @@ brew "podman"
 brew "podman-compose"
 # PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
+# Modern API client that lives in your terminal
+brew "posting"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Rust toolchain installer
@@ -64,6 +64,8 @@ brew "starship"
 brew "tealdeer"
 # Terminal multiplexer
 brew "tmux", args: ["HEAD"]
+# Friendly and fast tool for sending HTTP requests
+brew "xh"
 # Blazing fast terminal file manager written in Rust, based on async I/O
 brew "yazi"
 # Shell extension to navigate your filesystem faster
