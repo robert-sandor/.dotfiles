@@ -2,6 +2,8 @@ tap "fish-shell/fish-beta-4"
 tap "homebrew/bundle"
 # Run your GitHub Actions locally
 brew "act"
+# Simple, modern, secure file encryption
+brew "age"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Secure and free password manager for all of your devices
@@ -36,6 +38,8 @@ brew "lazydocker"
 brew "lazygit"
 # Mac App Store command-line interface
 brew "mas"
+# Tool for working with usage-spec CLIs
+brew "usage"
 # Polyglot runtime manager (asdf rust clone)
 brew "mise"
 # 7-Zip (high compression file archiver) implementation
@@ -50,6 +54,8 @@ brew "poppler"
 brew "ripgrep"
 # Rust toolchain installer
 brew "rustup"
+# Editor of encrypted files
+brew "sops"
 # Command-line utility for SQLx, the Rust SQL toolkit
 brew "sqlx-cli"
 # Cross-shell prompt for astronauts
@@ -66,6 +72,8 @@ brew "zoxide"
 brew "fish-shell/fish-beta-4/fish"
 # 3D model slicing software for 3D printers, maintained by Bambu Lab
 cask "bambu-studio"
+# Display management tool
+cask "betterdisplay"
 # Web browser focusing on privacy
 cask "brave-browser"
 # Voice and text chat software
