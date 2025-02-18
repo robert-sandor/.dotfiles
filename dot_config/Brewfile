@@ -92,6 +92,8 @@ cask "google-chrome"
 cask "jetbrains-toolbox"
 # Privacy-first, open-source platform for knowledge sharing and management
 cask "logseq"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
 # Browse, manage, inspect containers and images
 cask "podman-desktop"
 # VPN client focusing on security
