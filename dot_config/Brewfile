@@ -1,7 +1,5 @@
 tap "fish-shell/fish-beta-4"
 tap "homebrew/bundle"
-# Run your GitHub Actions locally
-brew "act"
 # Simple, modern, secure file encryption
 brew "age"
 # Clone of cat(1) with syntax highlighting and Git integration
@@ -66,8 +64,6 @@ brew "tealdeer"
 brew "tmux", args: ["HEAD"]
 # Friendly and fast tool for sending HTTP requests
 brew "xh"
-# Blazing fast terminal file manager written in Rust, based on async I/O
-brew "yazi"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
 # User-friendly command-line shell for UNIX-like operating systems
