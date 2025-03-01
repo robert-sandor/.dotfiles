@@ -50,6 +50,8 @@ brew "poppler"
 brew "posting"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Utility that provides fast incremental file transfer
+brew "rsync"
 # Rust toolchain installer
 brew "rustup"
 # Editor of encrypted files
@@ -102,6 +104,8 @@ cask "raycast"
 cask "rectangle"
 # Instant messaging application focusing on security
 cask "signal"
+# Music streaming service
+cask "spotify"
 # Video game digital distribution service
 cask "steam"
 # Media player based on MPlayer and mplayer2
@@ -118,6 +122,8 @@ cask "transmission"
 cask "unnaturalscrollwheels"
 # Native desktop client for WhatsApp
 cask "whatsapp"
+# Multiplayer code editor
+cask "zed"
 mas "Bitwarden", id: 1352778147
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
