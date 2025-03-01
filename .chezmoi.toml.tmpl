@@ -7,7 +7,8 @@ fullname = {{ $fullname | quote }}
 
 [data.terminal]
 font = "JetBrainsMono Nerd Font Mono"
-fontSize = {{ if eq .chezmoi.os "darwin" }} 16 {{ else }} 14 {{ end }}
+# fontSize = {{ if eq .chezmoi.os "darwin" }} 16 {{ else }} 14 {{ end }}
+fontSize = 14
 shellPath = {{ if eq .chezmoi.os "darwin" }} "/opt/homebrew/bin/fish" {{ else }} "/usr/bin/fish" {{ end }}
 
 [diff]
