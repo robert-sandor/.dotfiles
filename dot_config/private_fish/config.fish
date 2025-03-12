@@ -5,6 +5,8 @@ set -g fish_greeting
 command -q brew; and fish_add_path (brew --prefix rustup)/bin
 
 if status --is-interactive
+    fish_vi_key_bindings
+
     set -gx SHELL (which fish)
     set -gx EDITOR nvim
     set -gx MANPAGER "nvim +Man!"
