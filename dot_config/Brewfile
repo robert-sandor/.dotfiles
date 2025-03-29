@@ -13,6 +13,8 @@ brew "btop"
 brew "chezmoi"
 # Pack, ship and run any application as a lightweight container
 brew "docker"
+# Convert text between DOS, UNIX, and Mac formats
+brew "dos2unix"
 # More intuitive version of du in rust
 brew "dust"
 # Modern, maintained replacement for ls
@@ -67,12 +69,12 @@ brew "starship"
 brew "tealdeer"
 # Terminal multiplexer
 brew "tmux", args: ["HEAD"]
+# Command-line client for WebSockets
+brew "websocat"
 # Friendly and fast tool for sending HTTP requests
 brew "xh"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
-# 3D model slicing software for 3D printers, maintained by Bambu Lab
-cask "bambu-studio"
 # Display management tool
 cask "betterdisplay"
 # Web browser focusing on privacy
@@ -81,14 +83,10 @@ cask "brave-browser"
 cask "discord"
 # Desktop client for Ente Auth
 cask "ente-auth"
-# Web browser
-cask "firefox"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
 # Web browser
 cask "google-chrome"
-# JetBrains tools manager
-cask "jetbrains-toolbox"
 # GPU-based terminal emulator
 cask "kitty"
 # Privacy-first, open-source platform for knowledge sharing and management
@@ -97,6 +95,8 @@ cask "logseq"
 cask "obsidian"
 # Programmable solid 3D CAD modeller
 cask "openscad@snapshot"
+# G-code generator for 3D printers
+cask "orcaslicer"
 # Browse, manage, inspect containers and images
 cask "podman-desktop"
 # VPN client focusing on security
