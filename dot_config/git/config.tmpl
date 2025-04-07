@@ -5,13 +5,12 @@
 [delta]
   features = catppuccin-mocha
   navigate = true
-  dark = true
 
 [init]
-	defaultBranch = "main"
+	defaultBranch = main
 
 [interactive]
-	diffFilter = "delta --color-only"
+	diffFilter = delta --color-only
 
 [pull]
 	rebase = true
@@ -19,6 +18,9 @@
 [user]
 	email = {{ .user.email | quote }}
 	name = {{ .user.fullname | quote }}
+
+[merge]
+  conflictstyle = zdiff3
 
 [include]
 	path = "~/.config/git/catppuccin.gitconfig"
