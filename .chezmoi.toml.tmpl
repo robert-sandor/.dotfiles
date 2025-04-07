@@ -14,3 +14,12 @@ shellPath = {{ if eq .chezmoi.os "darwin" }} "/opt/homebrew/bin/fish" {{ else }}
 [diff]
 command = "delta"
 pager = "less -FR"
+
+[merge]
+    command = "nvim"
+    args = [
+        "-d",
+        {{ printf "%q" "{{ .Destination }}" }},
+        {{ printf "%q" "{{ .Source }}" }},
+        {{ printf "%q" "{{ .Target }}" }},
+    ]
