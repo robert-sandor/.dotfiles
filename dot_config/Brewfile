@@ -1,6 +1,10 @@
 tap "homebrew/bundle"
 # Simple, modern, secure file encryption
 brew "age"
+# Automate deployment, configuration, and upgrading
+brew "ansible"
+# Checks ansible playbooks for practices and behaviour
+brew "ansible-lint"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Secure and free password manager for all of your devices
