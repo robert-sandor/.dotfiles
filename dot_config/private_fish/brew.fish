@@ -38,7 +38,7 @@ end
 function brew-remove-cask -d 'Homebrew install cask'
     set -l selected (brew list --casks | fzf -m -q "$argv[1]" --preview="HOMEBREW_COLOR=true brew info --cask {}")
     if test -n "$selected"
-        brew uninstall --cask $selected
+        brew uninstall --zap --cask $selected
         echo "Removing $selected cask from Brewfile"
         brew-bundle
     end
