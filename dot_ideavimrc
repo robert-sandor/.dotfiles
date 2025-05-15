@@ -1,35 +1,54 @@
-" .ideavimrc is a configuration file for IdeaVim plugin. It uses
-"   the same commands as the original .vimrc configuration.
-" You can find a list of commands here: https://jb.gg/h38q75
-" Find more examples here: https://jb.gg/share-ideavimrc
+set scrolloff=8
+set relativenumber
+set showmode
+set showcmd
+set visualbell
+set clipboard+=unnamedplus
 
-
-"" -- Suggested options --
-" Show a few lines of context around the cursor. Note that this makes the
-" text scroll if you mouse-click near the start or end of the window.
-set scrolloff=5
-
-" Do incremental searching.
+set ignorecase
+set smartcase
 set incsearch
-
-" Don't use Ex mode, use Q for formatting.
-map Q gq
-
-" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
-
-" Highlight copied text
-Plug 'machakann/vim-highlightedyank'
-" Commentary plugin
-Plug 'tpope/vim-commentary'
-
+set hlsearch
 
 "" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
-"" Map \r to the Reformat Code action
-"map \r <Action>(ReformatCode)
+let mapleader = " "
 
-"" Map <leader>d to start debug
-"map <leader>d <Action>(Debug)
+nnoremap K :action QuickJavaDoc<CR>
 
-"" Map \b to toggle the breakpoint on the current line
-"map \b <Action>(ToggleLineBreakpoint)
+nnoremap <leader>\ :action SplitVertically<CR>
+nnoremap <leader>- :action SplitHorizontally<CR>
+
+nnoremap <leader><leader> :action GotoFile<CR>
+nnoremap <leader>/ :action FindInPath<CR>
+
+nnoremap <leader>ca :action ShowIntentionActions<CR>
+nnoremap <leader>cr :action RenameElement<CR>
+nnoremap <leader>cf :action ReformatCode<CR>
+
+nnoremap <leader>sS :action GotoSymbol<CR>
+
+nnoremap ]b :bnext<CR>
+nnoremap [b :bprev<CR>
+nnoremap ]d :action GotoNextError<CR>
+nnoremap [d :action GotoPreviousError<CR>
+
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+vnoremap < <gv
+vnoremap > >gv
+
+" Jump around with easymotion
+map s <Plug>(easymotion-s)
+
+" Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+set commentary
+set easymotion
+set highlightedyank
 set ideajoin
+set mini-ai
+set sneak
+set surround
+set which-key
