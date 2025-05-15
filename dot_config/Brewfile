@@ -41,6 +41,8 @@ brew "imagemagick"
 brew "lazydocker"
 # Simple terminal UI for git commands
 brew "lazygit"
+# Linux virtual machines
+brew "lima"
 # Mac App Store command-line interface
 brew "mas"
 # Tool for working with usage-spec CLIs
@@ -63,6 +65,8 @@ brew "ripgrep"
 brew "rsync"
 # Rust toolchain installer
 brew "rustup"
+# Static analysis and lint tool, for (ba)sh scripts
+brew "shellcheck"
 # Editor of encrypted files
 brew "sops"
 # Command-line utility for SQLx, the Rust SQL toolkit
@@ -91,6 +95,10 @@ cask "ente-auth"
 cask "ghostty"
 # Web browser
 cask "google-chrome"
+# Client for the Google Drive storage service
+cask "google-drive"
+# JetBrains tools manager
+cask "jetbrains-toolbox"
 # GPU-based terminal emulator
 cask "kitty"
 # Privacy-first, open-source platform for knowledge sharing and management
@@ -101,8 +109,6 @@ cask "obsidian"
 cask "openscad@snapshot"
 # G-code generator for 3D printers
 cask "orcaslicer"
-# Browse, manage, inspect containers and images
-cask "podman-desktop"
 # VPN client focusing on security
 cask "protonvpn"
 # Toolbox companion for QMK Firmware
@@ -129,8 +135,12 @@ cask "todoist"
 cask "transmission"
 # Tool to invert scroll direction for physical scroll wheels
 cask "unnaturalscrollwheels"
+# Open-source code editor
+cask "visual-studio-code"
 # Native desktop client for WhatsApp
 cask "whatsapp"
+# REST, GraphQL and gRPC client
+cask "yaak"
 # Multiplayer code editor
 cask "zed"
 mas "Bitwarden", id: 1352778147
@@ -139,3 +149,11 @@ mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "TestFlight", id: 899247664
 mas "WireGuard", id: 1451685025
+vscode "catppuccin.catppuccin-vsc"
+vscode "catppuccin.catppuccin-vsc-icons"
+vscode "ms-python.debugpy"
+vscode "ms-python.python"
+vscode "ms-python.vscode-pylance"
+vscode "redhat.ansible"
+vscode "redhat.vscode-yaml"
+vscode "vscodevim.vim"
