@@ -1,8 +1,8 @@
-{{- $email := promptStringOnce . "email" "Email address" "sandorrobertk94@gmail.com" -}}
-{{- $fullname := promptStringOnce . "name" "Full name" "Robert Sandor" -}}
+{{- $email := promptString "email" "sandorrobertk94@gmail.com" -}}
+{{- $fullname := promptString "fullname" "Robert Sandor" -}}
 
 {{- $hostTypeChoices := list "desktop" "server" -}}
-{{- $hostType := promptChoiceOnce . "hostType" "What host type is this?" $hostTypeChoices -}}
+{{- $hostType := promptChoice "hostType" $hostTypeChoices -}}
 
 [data]
 hostType = {{ $hostType | quote }}
