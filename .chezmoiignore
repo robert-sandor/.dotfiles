@@ -2,7 +2,7 @@
 .config/Brewfile # only manage Brewfile on macos
 {{- end }}
 
-{{- if eq .chezmoi.data.hostType "server" }}
+{{- if eq .hostType "server" -}}
 .ideavimrc
 .config/ghostty
 .config/git
@@ -11,4 +11,4 @@
 .config/mise
 .config/posting
 .config/Brewfile
-{{- -}}
+{{- end -}}
