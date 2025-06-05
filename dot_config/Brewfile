@@ -59,6 +59,8 @@ brew "podman-compose"
 brew "poppler"
 # Modern API client that lives in your terminal
 brew "posting"
+# Framework for managing multi-language pre-commit hooks
+brew "pre-commit"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Utility that provides fast incremental file transfer
@@ -99,12 +101,6 @@ cask "google-chrome"
 cask "google-drive"
 # JetBrains tools manager
 cask "jetbrains-toolbox"
-# GPU-based terminal emulator
-cask "kitty"
-# Privacy-first, open-source platform for knowledge sharing and management
-cask "logseq"
-# Knowledge base that works on top of a local folder of plain text Markdown files
-cask "obsidian"
 # Programmable solid 3D CAD modeller
 cask "openscad@snapshot"
 # G-code generator for 3D printers
@@ -121,8 +117,6 @@ cask "rectangle"
 cask "signal"
 # Music streaming service
 cask "spotify"
-# Video game digital distribution service
-cask "steam"
 # Media player based on MPlayer and mplayer2
 cask "stolendata-mpv"
 # Mesh VPN based on WireGuard
@@ -139,10 +133,10 @@ cask "unnaturalscrollwheels"
 cask "visual-studio-code"
 # Native desktop client for WhatsApp
 cask "whatsapp"
-# REST, GraphQL and gRPC client
-cask "yaak"
 # Multiplayer code editor
 cask "zed"
+# Gecko based web browser
+cask "zen"
 mas "Bitwarden", id: 1352778147
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
@@ -151,9 +145,12 @@ mas "TestFlight", id: 899247664
 mas "WireGuard", id: 1451685025
 vscode "catppuccin.catppuccin-vsc"
 vscode "catppuccin.catppuccin-vsc-icons"
+vscode "github.copilot"
+vscode "github.copilot-chat"
 vscode "ms-python.debugpy"
 vscode "ms-python.python"
 vscode "ms-python.vscode-pylance"
 vscode "redhat.ansible"
 vscode "redhat.vscode-yaml"
+vscode "samuelcolvin.jinjahtml"
 vscode "vscodevim.vim"
