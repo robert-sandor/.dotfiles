@@ -7,6 +7,8 @@ command -q brew; and fish_add_path (brew --prefix rustup)/bin
 if status --is-interactive
     fish_vi_key_bindings
 
+    fish_config theme choose "Catppuccin Frappe"
+
     set -gx SHELL (which fish)
     set -gx EDITOR nvim
     set -gx MANPAGER "nvim +Man!"
