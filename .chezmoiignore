@@ -1,8 +1,8 @@
-{{- if ne .chezmoi.os "darwin" }}
+{{ if ne .chezmoi.os "darwin" }}
 .config/Brewfile # only manage Brewfile on macos
-{{- end }}
+{{ end }}
 
-{{- if ne .hostType "desktop" -}}
+{{ if ne .hostType "desktop" }}
 .ideavimrc
 .config/ghostty
 .config/git
@@ -11,4 +11,4 @@
 .config/mise
 .config/posting
 .config/Brewfile
-{{- end -}}
+{{ end }}
