@@ -1,5 +1,7 @@
+{{- if eq .hostType "desktop" -}}
 [".config/git/catppuccin.gitconfig"]
 type = "archive-file"
 url = "https://github.com/catppuccin/delta/archive/refs/heads/main.zip"
 path = "delta-main/catppuccin.gitconfig"
 refreshPeriod = "168h"
+{{- end -}}

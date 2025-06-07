@@ -1,6 +1,8 @@
+{{- if eq .hostType "desktop" -}}
 [".config/ghostty/themes"]
 type = "archive"
 url = "https://github.com/catppuccin/ghostty/archive/refs/heads/main.zip"
 refreshPeriod = "168h"
 include = ["**/themes/*.conf"]
 stripComponents = 2
+{{- end -}}

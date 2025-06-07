@@ -2,7 +2,7 @@
 .config/Brewfile # only manage Brewfile on macos
 {{- end }}
 
-{{- if eq .hostType "server" -}}
+{{- if ne .hostType "desktop" -}}
 .ideavimrc
 .config/ghostty
 .config/git
