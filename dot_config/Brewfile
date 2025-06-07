@@ -101,6 +101,8 @@ cask "google-chrome"
 cask "google-drive"
 # JetBrains tools manager
 cask "jetbrains-toolbox"
+# Desktop sync client for Nextcloud software products
+cask "nextcloud"
 # Programmable solid 3D CAD modeller
 cask "openscad@snapshot"
 # G-code generator for 3D printers
