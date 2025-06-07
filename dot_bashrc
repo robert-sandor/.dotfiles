@@ -1,15 +1,15 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
 # if homebrew is installed (likely on macos) load its shellenv to be able to start fish
 if test -f /opt/homebrew/bin/brew; then
-    eval "$(/opt/homebrew/bin/brew shellenv)"
+  eval "$(/opt/homebrew/bin/brew shellenv)"
 elif test -f /home/linuxbrew/.linuxbrew/bin/brew; then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
 
 # start fish if not the parent process, there's no execution string (i.e. zsh -c "echo hello") and it's the first level of shell
 if ps -o comm -p $PPID | grep -qv fish; then
-  if [[ -z "${ZSH_EXECUTION_STRING}" && "$SHLVL" == 1 ]]; then
+  if [[ -z "${BASH_EXECUTION_STRING}" && "$SHLVL" == 1 ]]; then
     exec fish
   fi
 fi
