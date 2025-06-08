@@ -5,7 +5,6 @@
 {{ if ne .hostType "desktop" }}
 .ideavimrc
 .config/ghostty
-.config/git
 .config/kitty
 .config/lazygit
 .config/mise
