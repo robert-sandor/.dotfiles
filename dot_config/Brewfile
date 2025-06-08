@@ -78,7 +78,7 @@ brew "starship"
 # Very fast implementation of tldr in Rust
 brew "tealdeer"
 # Terminal multiplexer
-brew "tmux", args: ["HEAD"]
+brew "tmux"
 # Command-line client for WebSockets
 brew "websocat"
 # Friendly and fast tool for sending HTTP requests
