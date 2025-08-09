@@ -102,6 +102,8 @@ brew "websocat"
 brew "wimlib"
 # Friendly and fast tool for sending HTTP requests
 brew "xh"
+# Pluggable terminal workspace, with terminal multiplexer as the base feature
+brew "zellij"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
 # Application uninstaller
